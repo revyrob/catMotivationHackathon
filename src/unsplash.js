@@ -148,7 +148,6 @@ shareBtn.addEventListener("click", () => {
   html2canvas(document.querySelector(".poster__wrapper"), {
     letterRendering: 1,
     allowTaint: true,
-    onrendered,
   }).then(function (canvas) {
     const posterList = document.createElement("ul");
     posterList.classList.add("topten__list");
