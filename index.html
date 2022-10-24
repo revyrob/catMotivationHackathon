@@ -1,25 +1,45 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cat Motivation</title>
-</head>
-<body>
+<html>
+  <head>
+    <title>Cat Poster Maker</title>
+    <meta charset="UTF-8" />
+  </head>
+<link rel="stylesheet" href="./styles/styles.css">
+  <body>
+    <!-- body I made and we need to merge the two -->
     <h1 class="main__title">Get a personalized cat motivation poster!</h1>
-    <div class="main__body">
-        <!-- APIs divs for unsplash and for zenquote -->
-        <div class="main__photo"></div>
-        <div class="main__wrapper">
+
+    <div class="main">
+      <button class="main__btn">Get Poster</button>
+      <!-- APIs divs for unsplash and for zenquote -->
+      <div class="poster__wrapper">
+        <div class="poster__cat">
+          <!-- div class poster__mainimg goes here-->
+        </div>
+        <p class="poster__text poster__text--headline"></p>
+        <p class="poster__text poster__text--maintext">
+          "This is the temporary text of a quote"
+        </p>
+        <p class="poster__text poster__text--attribution">attribution</p>
+      </div>
+      <div class="main__wrapper">
         <div class="main__higlight"></div>
         <div class="main__normal"></div>
-        <div class="main__likeButton"></div>
-    </div>
-    <!-- we could have top ten posters after likes on left-hand side -->
-    <div class="topTenPoster">
+      </div>
+      <div class="main__likeWrapper">
+        <button class="main__copy">
+          <img class="main__copy--img" src="./img/copy-icon.png" />
+        </button>
+      </div>
 
+      <!-- we could have top ten posters after likes on left-hand side -->
+      <div class="topTenPoster"></div>
     </div>
-    </div>
-</body>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.min.js" type="text/javascript"></script>
+    <script src="./src/unsplash.js" type="text/javascript"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.0/html2canvas.min.js" integrity="sha512-UcDEnmFoMh0dYHu0wGsf5SKB7z7i5j3GuXHCnb3i4s44hfctoLihr896bxM0zL7jGkcHQXXrJsFIL62ehtd6yQ==" crossorigin="anonymous"
+    referrerpolicy="no-referrer"></script>
+  </body>
 </html>
